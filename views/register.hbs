@@ -1,7 +1,42 @@
-<form>
-    <input type="text" placeholder="Name">
-    <input type="text" placeholder="Email">
-    <input type="text" placeholder="Number Phone">
-    <input type="text" placeholder="Password">
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
+
+
+
+<div class="container">
+    <br>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            
+          <h1>{{{viewTitle}}}</h1>  
+        </div>
+        <div class="panel-body">
+
+            <form action="/register/add" method="POST" autocomplete="off">
+                <input type="hidden" name="id" value="{{user._id}}">
+                <div class="form-group">
+                    <label for="usr">Name:</label>
+                    <input required="true" type="text" class="form-control" name="name" value="{{user.name}}">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input required="true" type="email" class="form-control" name="email" value="{{user.email}}">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Number Phone :</label>
+                    <input required="true" type="text" class="form-control" name="numberPhone" value="{{user.numberPhone}}">
+                </div>
+                <div class="form-group">
+                    <label for="confirmation_pwd"> Password:</label>
+                    <input required="true" type="password" class="form-control" name="password" value="{{user.password}}">
+                </div>
+                <button class="btn btn-success" type="submit">Submit</button>
+                <a href="register/list" class="btn btn-success" > View List</a>
+               
+            </form>
+            
+            
+        </div>
+    </div>
+    </form>
+</div>

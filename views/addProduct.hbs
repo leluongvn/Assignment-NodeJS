@@ -1,15 +1,64 @@
-<div class="row" style="margin-top: 100px;">
+<style>
+    #imgpr{
+        border-radius:
+                     8px;margin: 10px;width: 300px;height: 
+       
+                     30px;border:0; outline:0; text-align: center;
+    }
+    #button{
+        border-radius: 8px;margin: 10px;width:
+                 300px;height: 40px;border:0; outline:0;
+                 font-weight: bold;
+                 background-color:
+                  rgb(31, 31, 29);margin-bottom: 50px;margin-left: 290px; width: 450px; 
+                  color: white ;"
+    }
+    #div1{
+        height: 400px;background: #afaaaa;
+    }
+    #textarea{
+        border-radius: 8px;border: 0;outline: 0;
+    }
+    #div4{
+        height: 90px ; margin-top: 60px;
+    }
+</style>
+<div class="container">
+    <br>
 
-    <form class="cf">
-        <div class="half left cf">
-            <input type="text" id="input-name" placeholder="Name">
-            <input type="email" id="input-email" placeholder="Email address">
-            <input type="text" id="input-subject" placeholder="Subject">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h1>Thêm sản phẩm</h1>
         </div>
-        <div class="half right cf">
-            <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+        <div class="panel-body">
+            <form action="/addProduct/add" method="POST" autocomplete="off" enctype="multipart/form-data        ">
+             <input type="hidden" name="id" value="{{product._id}}">
+                <div class="row" id="div1">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4" style="text-align: center; margin-top: 50px;">
+                        <input value="{{product.name}}" id="imgpr" type="text"required="true" name="name" placeholder="Tên sản phẩm ">
+                        <select id="imgpr" name="typeProduct" required>
+                            <option value="Laptop">Laptop</option>
+                            <option value="Điện thoại">Điện thoại</option>
+                            <option value="Phụ kiện">Phụ kiện</option>
+                        </select>        
+                        <input value="{{product.price}}" required="true" type="text"id="imgpr" name="price"
+                            placeholder="Giá sản phẩm">
+                        <input value="{{product.imageProduct}}"  required="true" type="text" id="imgpr" name="imageProduct">
+                    </div>
+                    <div class="col-sm-4" id="div4">
+                        <textarea id="textarea"  value="{{product.detail}}"  required="true" name="detail"  cols="40" rows="9"></textarea>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                <div class="row" style="background: #afaaaa;">
+                    <button id="button"> <a href="/list">Submit</a></button>
+                    <a href="addProduct/list" class="btn btn-danger btn-sm"> Xem sản phẩm </a>
+                </div>
+            </form>
         </div>
-        <input type="submit" value="Submit" id="input-submit">
+    </div>
     </form>
-
 </div>
+
+

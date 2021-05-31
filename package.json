@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leluongvn/Assignment-NodeJS.git"
+    "url": "https://github.com/leluongvn/AssignmentNodeJs-Spring.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leluongvn/Assignment-NodeJS/issues"
+    "url": "https://github.com/leluongvn/AssignmentNodeJs-Spring.git/issues"
   },
   "homepage": "https://github.com/leluongvn/Assignment-NodeJS#readme",
   "dependencies": {
@@ -21,6 +21,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.3.0",
     "mongoose": "^5.12.3",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "popups": "^1.1.3"
   }
 }

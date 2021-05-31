@@ -3,7 +3,6 @@ const userModel = require('../models/user')
 const app = express()
 
 app.post('/register', async(req,res) =>{
-
     const user = new userModel(req.body)
     try {
         await user.save()

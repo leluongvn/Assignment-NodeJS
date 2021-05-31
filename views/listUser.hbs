@@ -1,0 +1,32 @@
+<br><br><br>
+<h2>List User </h2>
+<hr>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Name</th>
+            <th scope="col">Number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Edit</th>
+        </tr>
+    </thead>
+    <tbody> 
+            {{#each users}}
+            <tr>
+                <th scope="row">{{this._id}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.numberPhone}}</td>
+                <td>{{this.password}}</td>
+                <td>
+                    <a href="/register/edit/{{this._id}}" class="btn btn-primary btn-sm">Edit</a>
+                    <a href="/register/delete/{{this._id}}" onclick="return confirm('Xóa ?')" class="btn btn-danger btn-sm">Remote</a>
+                </td>
+            </tr>
+            {{/each}}
+    </tbody>
+</table>
+<button class="btn btn-success"><a href="/register">Thêm người dùng</a></button>
+<br><br><br>

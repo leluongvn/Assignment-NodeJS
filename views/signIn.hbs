@@ -1,0 +1,32 @@
+<div class="container">
+    <br>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h1>Đăng nhập hệ thống</h1>
+        </div>
+        <div class="panel-body">
+
+            <form action="/register/add" method="POST" autocomplete="off">
+                <input type="hidden" name="id" value="{{user._id}}">
+                <div class="form-group">
+                    <label for="usr">Name:</label>
+                    <input required="true" type="text" class="form-control" name="name" value="{{user.name}}">
+                </div>
+                <div class="form-group">
+                    <label for="confirmation_pwd"> Password:</label>
+                    <input required="true" type="password" minlength="6" class="form-control" name="password"
+                     value="{{user.password}}">
+                </div>
+                <button class="btn btn-success" type="submit">Đăng nhập</button>
+                <a href="register" class="btn btn-success">Đăng kí</a>
+                <br><br>
+                <a href="">Quên mật khẩu</a>
+
+            </form>
+
+
+        </div>
+    </div>
+    </form>
+</div>

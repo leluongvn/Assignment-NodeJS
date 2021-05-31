@@ -1,77 +1,56 @@
+
+      <style>
+          #img{
+              width: 150px;
+              height: 80px;
+          }
+      </style>
         <div class="row">
-            <article class="col-sm-9">
-                <div class="row poly-cart"style="margin-top: 50px;">
-                    <div class="col-sm-4">
-                        <div class="card text-center">
-                            <div class="card-header">
-                                Samsung
-                            </div>
-                            <div class="card-body">
-                                <img src="https://minhtuanmobile.com/wp-content/uploads/2020/10/iphone-12-pro-max-195420-015420-600x600-1.jpg" alt="" width="250" height="200">
-                                <div class="card-footer">$1000</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4" >
-                        <div class="card text-center">
-                            <div class="card-header">
-                                Samsung
-                            </div>
-                            <div class="card-body">
-                                <img src="sam.jpg" alt="" width="250" height="200">
-                                <div class="card-footer">$1000</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card text-center">
-                            <div class="card-header">
-                                Samsung
-                            </div>
-                            <div class="card-body">
-                                <img src="sam.jpg" alt="" width="250" height="200">
-                                <div class="card-footer">$1000</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row poly-cart">
-                    <div class="col-sm-4">
-                        <div class="card text-center">
-                            <div class="card-header">
-                                Samsung
-                            </div>
-                            <div class="card-body">
-                                <img src="sam.jpg" alt="" width="250" height="200">
-                                <div class="card-footer">$1000</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card text-center">
-                            <div class="card-header">
-                                Samsung
-                            </div>
-                            <div class="card-body">
-                                <img src="sam.jpg" alt="" width="250" height="200">
-                                <div class="card-footer">$1000</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card text-center">
-                            <div class="card-header">
-                                Samsung
-                            </div>
-                            <div class="card-body">
-                                <img src="./images/sam.jpg" alt="" width="250" height="200">
-                                <div class="card-footer">$1000</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <article class="col-sm-10">
+               
+        <br><br><br>
+        <h2>Mặt hàng đang bán</h2>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Tên </th>
+                    <th scope="col">Giá </th>
+                    <th scope="col">Loại </th>
+                    <th scope="col">Chi tiết</th>
+                    <th scope="col">Hình ảnh </th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                {{#each products}}
+                <tr>
+                    {{!-- <th scope="row">{{this._id}}</th> --}}
+                    <td>{{this.name}}</td>
+                    <td>{{this.price}}</td>
+                    <td>{{this.typeProduct}}</td>
+                    <td>{{this.detail}}</td>
+                    <td>
+                        <img id="img" src="{{this.imageProduct}}"></td>
+                    </td>
+                    <td>
+                        <a href="/addProduct/edit/{{this._id}}" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="/addProduct/delete/{{this._id}}" onclick="return confirm('Xóa ?')"
+                            class="btn btn-danger btn-sm">Remote</a>
+                    </td>
+                </tr>
+                {{/each}}
+        
+            </tbody>
+        </table>
+        <button class="btn btn-success"><a href="/addProduct">Thêm mặt hàng</a></button>
+        <br><br><br>
+
+
             </article>
-            <aside class="col-sm-3">
+
+            <aside class="col-sm-2">
                 <div class="card poly-cart" style="margin-top: 50px;">
                 </div>
                 <div class="card poly-cart">
