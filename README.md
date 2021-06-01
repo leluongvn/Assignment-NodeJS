@@ -2,5 +2,5 @@
 Server NodeJS - Android
 
 clone rp 
-
-n
+-run server
+node index
